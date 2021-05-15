@@ -1,0 +1,70 @@
+@import '../common';
+
+:host {
+  .container {
+    position: absolute;
+    //overflow: auto; // ! background color stays fixed !
+    top: $header-height;
+    //left: $sidebar-width;
+    left: $sidebar-width;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    //left: $sidebar-width;
+    left: 0;
+    right: 0;
+    height: $header-height;
+    //background-color: rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    z-index: 2;
+    .menuToggleDiv {
+      width: $sidebar-width;
+      text-align: center;
+      padding-top: 2rem;
+      fa-icon {
+        font-size: 1.5rem;
+        color: #01a0c6;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .IdetaLogo {
+      flex: 0 1 auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      img {
+        max-height: $header-height;
+      }
+    }
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: $header-height;
+    bottom: 0;
+    width: $sidebar-width;
+    background: #fff;
+    z-index: 5;
+    //background-color: #050505;
+    .main-menu {
+      text-align: center;
+      p {
+        color: #01a0c6;
+        font-size: 19px;
+        margin-top: 1rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

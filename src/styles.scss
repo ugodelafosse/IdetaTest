@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Aqum";
+  src: local("Aqum"), url(./assets/fonts/Aqum.ttf) format("truetype");
+}
+
+html {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #34404c;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background: radial-gradient(circle, #a5c6e8 14%,#34404C 64%);
+  }
+  ::-webkit-scrollbar-track{
+    background: #050505;
+    border-radius: 5px;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #050505;
+  font-family: "Aqum", Arial, Helvetica, sans-serif;
+}
