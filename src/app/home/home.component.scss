@@ -1,0 +1,11 @@
+@import "../../common";
+
+:host {
+  .homeContainer {
+    background: linear-gradient(#fff, #01a0c6);
+  }
+  p {
+    color: #a52323;
+    height: 200vh;
+  }
+}
