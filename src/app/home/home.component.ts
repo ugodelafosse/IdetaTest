@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import AOS from 'aos';
 
@@ -7,7 +7,7 @@ import AOS from 'aos';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   dynamicSlides = [
     {
       id: 1,
@@ -102,6 +102,4 @@ export class HomeComponent implements OnInit {
   constructor() {
     AOS.init();
   }
-
-  ngOnInit(): void {}
 }

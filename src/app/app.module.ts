@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CustomLogoBarService } from './services/customLogoBar.service';
 import {
   FontAwesomeModule,
   FaIconLibrary,
@@ -17,7 +18,7 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
     AppRoutingModule,
     FontAwesomeModule,
   ],
-  providers: [],
+  providers: [CustomLogoBarService],
   bootstrap: [AppComponent],
 })
 export class AppModule {

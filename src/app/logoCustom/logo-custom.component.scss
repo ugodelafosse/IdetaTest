@@ -1,0 +1,14 @@
+@import "../../common";
+
+:host {
+  .logoContainer {
+    background: linear-gradient(#fff, #01a0c6);
+    height: 91.8vh;
+    display: flex;
+    img {
+      max-width: 60%;
+      height: auto;
+      margin: auto;
+    }
+  }
+}

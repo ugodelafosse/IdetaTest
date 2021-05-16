@@ -79,6 +79,11 @@
       -moz-transition: opacity 0.2s linear;
       -o-transition: opacity 0.2s linear;
       transition: opacity 0.2s linear;
+      .logoCustomBar {
+        width: 100%;
+        border-top: 3px solid #193253;
+        margin-top: 1rem;
+      }
       &.active {
         display: block;
         opacity: 1;
@@ -90,6 +95,9 @@
           color: #01a0c6;
           font-size: 19px;
           margin-top: 1rem;
+          &.customChoice {
+            font-size: 15px;
+          }
           &:hover {
             cursor: pointer;
           }

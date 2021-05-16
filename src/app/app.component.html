@@ -3,6 +3,19 @@
     <div [ngClass]="{ active: sidebarActive }" class="main-menu">
       <p routerLink="/home">Home</p>
       <p routerLink="/logoCustom">Logo</p>
+      <div *ngIf="router.url.includes('/logoCustom')" class="logoCustomBar">
+        <div>
+          <h3>Background</h3>
+          <p (click)="updateBackground('A')" class="customChoice">Transparent</p>
+          <p (click)="updateBackground('B')" class="customChoice">#01a0c6</p>
+          <p (click)="updateBackground('C')" class="customChoice">#193253</p>
+        </div>
+        <div *ngIf="selectedBackground === 'A'">
+          <h3>Font-Color</h3>
+          <p (click)="updateFontColor('A')" class="customChoice">#01a0c6</p>
+          <p (click)="updateFontColor('B')" class="customChoice">Black</p>
+        </div>
+      </div>
     </div>
   </div>
   <div class="header">
