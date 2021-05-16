@@ -3,9 +3,177 @@
 :host {
   .homeContainer {
     background: linear-gradient(#fff, #01a0c6);
-  }
-  p {
-    color: #a52323;
-    height: 200vh;
+    .homeImage {
+      width: 100%;
+      height: 40rem;
+      display: block;
+      position: relative;
+      z-index: 1;
+      &:after {
+        content: "";
+        background: url(../../assets/Images/skyImage.jpg);
+        opacity: 0.2;
+        top: -50%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: 3;
+      }
+      div {
+        width: 50%;
+        background-color: #193253;
+        margin: 0 auto;
+        text-align: center;
+        padding: 1rem;
+        z-index: 3;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 10px;
+        h1 {
+          color: #fff;
+          font-size: 40px;
+          margin-bottom: 1rem;
+        }
+        h2 {
+          font-size: 30px;
+          margin-top: 0;
+          margin-bottom: 2rem;
+          color: #fff;
+        }
+        p {
+          font-size: 17px;
+          color: lightgrey;
+          padding-left: 10rem;
+          padding-right: 10rem;
+          &.title {
+            font-size: 14px;
+            color: #01a0c6;
+            margin-bottom: 2rem;
+            padding: 0;
+          }
+        }
+        //button {
+        //  z-index: 10;
+        //  margin-top: 2rem;
+        //  padding: 1rem 2rem 1rem 2rem;
+        //  font-size: 1.3rem;
+        //  &:hover {
+        //    cursor: pointer;
+        //  }
+        //  &:after {
+        //    font-family: "Font Awesome 5 Free";
+        //    content: "\f054";
+        //    font-weight: 400;
+        //  }
+        //}
+      }
+    }
+    .content2 {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      width: 100%;
+      height: 100%;
+      ::ng-deep .owl-item {
+        margin-right: 50px;
+      }
+      ::ng-deep .owl-prev, ::ng-deep .owl-next {
+        border-radius: 10px;
+        width: 3rem;
+        font-size: 22px;
+        background-color: #193253;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+      .carouselCard {
+        text-align: center;
+        box-shadow: -8px 9px 20px -10px #050505;
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        max-width: 370px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 1rem 1rem 1rem;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        border: 1px solid rgba(8,72,114,.05);
+        border-radius: 10px;
+        background-color: #01a0c6;
+        .imgContainer {
+          width: 5rem;
+          height: 80px;
+          margin: 0 auto;
+          display: flex;
+          img {
+            max-width: 100%;
+            height: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
+        }
+        p {
+          margin-top: 2rem;
+          color: #193253;
+        }
+      }
+    }
+    .content3 {
+      width: 100%;
+      text-align: center;
+      margin-top: 10rem;
+      .fadeCard {
+        width: 80%;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        .text {
+          color: #193253;
+          width: 50%;
+          height: 100%;
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+        .fadeImage {
+          width: 50%;
+          display: flex;
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+    .content4 {
+      width: 100%;
+      height: 20rem;
+      display: flex;
+      .goToLogoButt {
+        display: flex;
+        width: 15rem;
+        height: 3rem;
+        background-color: #193253;
+        margin: auto;
+        border-radius: 10px;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+        p {
+          color: #ffffff;
+          margin: auto;
+        }
+      }
+    }
   }
 }

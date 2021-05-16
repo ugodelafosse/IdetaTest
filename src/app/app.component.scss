@@ -3,43 +3,49 @@
 :host {
   .container {
     position: absolute;
-    //overflow: auto; // ! background color stays fixed !
     top: $header-height;
-    //left: $sidebar-width;
     left: $sidebar-width;
     right: 0;
     bottom: 0;
     z-index: 1;
+    -webkit-transition: left 0.2s linear;
+    -moz-transition: left 0.2s linear;
+    -o-transition: left 0.2s linear;
+    transition: left 0.2s linear;
+    &.fullWidth {
+      left: 0;
+      -webkit-transition: left 0.2s linear;
+      -moz-transition: left 0.2s linear;
+      -o-transition: left 0.2s linear;
+      transition: left 0.2s linear;
+    }
   }
 
   .header {
     display: flex;
     justify-content: flex-start;
     position: fixed;
-    //left: $sidebar-width;
     left: 0;
     right: 0;
     height: $header-height;
-    //background-color: rgba(0, 0, 0, 0.5);
     background-color: #fff;
     z-index: 2;
     .menuToggleDiv {
       width: $sidebar-width;
-      text-align: center;
-      padding-top: 2rem;
-      fa-icon {
-        font-size: 1.5rem;
-        color: #01a0c6;
-        &:hover {
-          cursor: pointer;
-        }
-      }
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: center;
     }
     .IdetaLogo {
       flex: 0 1 auto;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
       img {
         max-height: $header-height;
       }
@@ -51,19 +57,83 @@
     left: 0;
     top: $header-height;
     bottom: 0;
-    width: $sidebar-width;
+    width: 0;
     background: #fff;
     z-index: 5;
-    //background-color: #050505;
+    -webkit-transition: width 0.2s linear;
+    -moz-transition: width 0.2s linear;
+    -o-transition: width 0.2s linear;
+    transition: width 0.2s linear;
+    &.active {
+      width: $sidebar-width;
+      -webkit-transition: width 0.2s linear;
+      -moz-transition: width 0.2s linear;
+      -o-transition: width 0.2s linear;
+      transition: width 0.2s linear;
+    }
     .main-menu {
       text-align: center;
-      p {
-        color: #01a0c6;
-        font-size: 19px;
-        margin-top: 1rem;
-        &:hover {
-          cursor: pointer;
+      display: none;
+      opacity: 0;
+      -webkit-transition: opacity 0.2s linear;
+      -moz-transition: opacity 0.2s linear;
+      -o-transition: opacity 0.2s linear;
+      transition: opacity 0.2s linear;
+      &.active {
+        display: block;
+        opacity: 1;
+        -webkit-transition: opacity 0.2s linear;
+        -moz-transition: opacity 0.2s linear;
+        -o-transition: opacity 0.2s linear;
+        transition: opacity 0.2s linear;
+        p {
+          color: #01a0c6;
+          font-size: 19px;
+          margin-top: 1rem;
+          &:hover {
+            cursor: pointer;
+          }
         }
+      }
+    }
+  }
+
+  // Menu Toggle
+  label{
+    display:flex;
+    flex-direction:column;
+    width:30px;
+    cursor:pointer;
+    input[type="checkbox"]{
+      display:none;
+    }
+    input[type="checkbox"]:checked ~ span:nth-of-type(1){
+      transform-origin:bottom;
+      transform:rotatez(45deg) translate(4px,2px)
+    }
+    input[type="checkbox"]:checked ~ span:nth-of-type(2){
+      transform-origin:top;
+      transform:rotatez(-45deg)
+    }
+    input[type="checkbox"]:checked ~ span:nth-of-type(3){
+      transform-origin:bottom;
+      width:50%;
+      transform: translate(12px,-6.5px) rotatez(45deg);
+    }
+    span{
+      background: #01a0c6;
+      border-radius:10px;
+      height:5px;
+      margin: 3px 0;
+      transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      &:nth-of-type(1){
+        width:50%;
+      }
+      &:nth-of-type(2){
+        width:100%;
+      }
+      &:nth-of-type(3){
+        width:75%;
       }
     }
   }

@@ -1,4 +1,69 @@
 <div class="homeContainer">
-  <p>Test</p>
+  <div class="homeImage">
+    <div>
+      <p class="title">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+      <h1>In aliquet pellentesque.</h1>
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+      <p>In aliquet pellentesque hendrerit. Vestibulum eu nisi at felis dignissim dapibus sit amet a dolor.</p>
+<!--      <button>Check it out</button>-->
+    </div>
+  </div>
+  <div class="content2">
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let slide of dynamicSlides">
+        <ng-template carouselSlide [id]="slide.id">
+          <div class="carouselCard">
+            <div class="imgContainer">
+              <img [src]="slide.src" alt="slideImage"/>
+            </div>
+            <p>Quisque sit amet velit mi. Quisque viverra neque ex. Nulla et lacus risus. Vestibulum et maximus leo. Suspendisse bibendum quam at enim pretium interdum.</p>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+  <div class="content3">
+    <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1800" class="fadeCard">
+      <div class="text">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Nunc vitae urna vel erat cursus placerat eu a velit. Ut laoreet tempor laoreet. Mauris dictum est sed consequat cursus. Ut nec massa mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris ultricies sem sagittis, venenatis orci sed, tempus mi. Nulla auctor erat lectus, ac ornare ante imperdiet at.</p>
+      </div>
+      <div class="fadeImage">
+        <img src="../../assets/Images/Various%20Images/code1.jpg" alt="fadeImage"/>
+      </div>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1800" class="fadeCard">
+      <div class="fadeImage">
+        <img src="../../assets/Images/Various%20Images/code2.jpg" alt="fadeImage"/>
+      </div>
+      <div class="text">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Nunc vitae urna vel erat cursus placerat eu a velit. Ut laoreet tempor laoreet. Mauris dictum est sed consequat cursus. Ut nec massa mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris ultricies sem sagittis, venenatis orci sed, tempus mi. Nulla auctor erat lectus, ac ornare ante imperdiet at.</p>
+      </div>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1800" class="fadeCard">
+      <div class="text">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Nunc vitae urna vel erat cursus placerat eu a velit. Ut laoreet tempor laoreet. Mauris dictum est sed consequat cursus. Ut nec massa mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris ultricies sem sagittis, venenatis orci sed, tempus mi. Nulla auctor erat lectus, ac ornare ante imperdiet at.</p>
+      </div>
+      <div class="fadeImage">
+        <img src="../../assets/Images/Various%20Images/code3.jpg" alt="fadeImage"/>
+      </div>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1800" class="fadeCard">
+      <div class="fadeImage">
+        <img src="../../assets/Images/Various%20Images/world.jpg" alt="fadeImage"/>
+      </div>
+      <div class="text">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Nunc vitae urna vel erat cursus placerat eu a velit. Ut laoreet tempor laoreet. Mauris dictum est sed consequat cursus. Ut nec massa mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris ultricies sem sagittis, venenatis orci sed, tempus mi. Nulla auctor erat lectus, ac ornare ante imperdiet at.</p>
+      </div>
+    </div>
+  </div>
+  <div class="content4">
+    <div routerLink="/logoCustom" class="goToLogoButt">
+      <p>Customize Logo</p>
+    </div>
+  </div>
 </div>
 

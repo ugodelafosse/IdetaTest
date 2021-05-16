@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,14 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'IdetaTest';
-
   faBars = faBars;
+  sidebarActive = false;
+
+  constructor() {
+    AOS.init();
+  }
+
+  toggleSidebar() {
+    this.sidebarActive = !this.sidebarActive;
+  }
 }

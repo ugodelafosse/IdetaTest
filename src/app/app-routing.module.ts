@@ -15,6 +15,11 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
+  {
+    path: 'logoCustom',
+    loadChildren: () =>
+      import('./logoCustom/logo-custom.module').then((m) => m.LogoCustomModule),
+  },
 ];
 
 @NgModule({

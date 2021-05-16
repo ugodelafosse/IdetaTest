@@ -1,20 +1,24 @@
 <div class="main-container">
-  <div class="sidebar">
-    <div class="main-menu">
+  <div [ngClass]="{ active: sidebarActive }" class="sidebar">
+    <div [ngClass]="{ active: sidebarActive }" class="main-menu">
       <p routerLink="/home">Home</p>
-      <p>News</p>
-      <p>Contact</p>
+      <p routerLink="/logoCustom">Logo</p>
     </div>
   </div>
   <div class="header">
     <div class="menuToggleDiv">
-      <fa-icon [icon]="faBars"></fa-icon>
+      <label for="check">
+        <input (click)="toggleSidebar()" type="checkbox" id="check"/>
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
     </div>
     <div class="IdetaLogo">
       <img src="../assets/Images/Ideta%20Logos/Artboard.png" alt="IdetaLogo"/>
     </div>
   </div>
-  <div class="container">
+  <div [ngClass]="{ fullWidth: !sidebarActive }" class="container">
     <router-outlet></router-outlet>
   </div>
 </div>
